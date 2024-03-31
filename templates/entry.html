@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry</title>
+    <link rel="stylesheet" href="entry.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ENTRY</h1>
+            <!-- Button to go back to the dashboard -->
+            <a href="{{ url_for('dashboard') }}" class="back-button"
+            ><button>
+                <span>Back to dashboard</span>
+                <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                    <path d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z" fill="black"></path>
+                </svg>
+            </button></a
+          >
+        </div>
+        <!-- Entry form -->
+        <div class="form-container">
+            <form method="post">
+                <div class="wrapper">
+                  <div class="form-box login">
+                    
+                    <form action="#">
+                      <div class="input-box mail">
+                        <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                        <input type="text" id="name" name="name" required />
+                        <label>Name:</label>
+                      </div>
+                      <div class="input-box">
+                        <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                        <input
+                        type="text"
+                        id="phone_number"
+                        name="phone_number"
+                        required />
+                        <label>Phone No:</label>
+                      </div>
+                      <div class="input-box "  >
+                          
+                          <input
+                          type="datetime-local"
+                          id="entry_time"
+                          name="entry_time"
+                          required/>
+                          <label >Entry Time:</label>
+                        </div>
+                        <div class="btn-container"><button type="submit" class="button">Submit</button>
+                         
+                            <div class="ps5-container">
+                                <label for="ps5" id="ps5">PS5 :</label>
+            
+                                <div class="checkbox-wrapper-12">
+                                    <div class="cbx">
+                                      <input checked="" type="checkbox" id="cbx-12" name="ps5" {% if 'ps5' in selected_foods %} checked {% endif %}>
+                                      <label for="cbx-12"></label>
+                                      <svg fill="none" viewBox="0 0 15 14" height="14" width="15">
+                                        <path d="M2 8.36364L6.23077 12L13 2"></path>
+                                      </svg>
+                                    </div>
+                                    
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                      <defs>
+                                        <filter id="goo-12">
+                                          <feGaussianBlur result="blur" stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+                                          <feColorMatrix result="goo-12" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" mode="matrix" in="blur"></feColorMatrix>
+                                          <feBlend in2="goo-12" in="SourceGraphic"></feBlend>
+                                        </filter>
+                                      </defs>
+                                    </svg>
+                                  </div>
+                            </div>     
+                        </div>
+                      
+                  
+                    </form>
+        </div>
+    </div>
+</body>
+<script
+type="module"
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+nomodule
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+<script>document.getElementById("cbx-12").checked = false;</script>
+</html>
